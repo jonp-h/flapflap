@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Vector2 upForce = new Vector2(0, 1);
 
-
+    public Animator playerAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity = upForce;
+
+            playerAnimator.SetTrigger("WingFlap");
         }
     }
 }

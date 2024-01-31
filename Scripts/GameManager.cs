@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public bool gameHasEnded = false;
+    public int score;
+
+    public bool gameHasEnded;
 
     public void EndGame()
     {
